@@ -21,9 +21,9 @@ public class Test1 {
 		System.out.println("每隔一段时间" + new Date());
 	}
 
-	@Scheduled(cron = "0 13 17 ? * *")
+	@Scheduled(cron = "0/3 * * ? * *")
 	public void cronRun() {
-		System.out.println("每天运行");
+		System.out.println("每天17点开始，每隔13秒运行"+ new Date());
 	}
 
 }
